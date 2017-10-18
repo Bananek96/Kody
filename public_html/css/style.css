@@ -1,3 +1,40 @@
 body {
-    background-color: yellow;
+    font-family: arial, tahoma, verdana, serif;
+    font-size: 12pt;
+    line-height: 1.5em;
+    background-color: black;
+    color: white;
 }
+
+h1{
+    font-size: 250%;
+}
+
+.pochylony {
+    font-style: italic;
+}
+
+.pogrubiony {
+    font-weight: bold;
+}
+
+li {
+    font: italic 16px/24px arial, serif;
+}
+
+.tekst1{
+    color: #8612BE;
+}
+.tekst2{
+    color: #FFFF00;
+}
+p{
+    color: white;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
