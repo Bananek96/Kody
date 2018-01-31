@@ -65,7 +65,12 @@ function draw() {
       strokeWeight(4);
       stroke(0,0,0);
       rect(mouseX-10,mouseY-10,20,20);
-    }
+    } if (mouseButton === RIGHT){
+      strokeWeight(30);
+      fill(255, 255, 255);
+      stroke(255, 255, 255);
+      rect(mouseX-10,mouseY-10,20,20);
+  }
   } else {
     noFill();
     noStroke();
