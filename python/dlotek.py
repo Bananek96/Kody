@@ -5,30 +5,35 @@ import random
 
 
 def main(args):
-    ileLiczb = int(input("Podaj ilość typowanych liczb: "))
-    maksLiczba = int(input("Podaj maksymalna losowaną liczbe: "))
-    print("wytypuj {} z {} liczb".format(ileLiczb, maksLiczba))
+    ileliczb = int(input("Podaj ilość typowanych liczb: "))
+    maksliczba = int(input("Podaj maks. losowaną liczbę: "))
+    print("Wytypuj {} z {} liczb".format(ileliczb, maksliczba))
 
-    # komentarz
-    liczby = []
-    for i in range(ileLiczb):
-        liczba = random.randint(1, maksLiczba)
-        if liczby.count(liczba) == 0:
+    # losowanie liczb
+
+    liczby = []  # lista wylosowanych liczb
+    i = 0
+    #  for i in range(ileliczb):
+    while i < ileliczb:
+        liczba = random.randint(1, maksliczba)  # losowanie liczby <1;10>
+        if liczby.count(liczba) == 0:  # sprawdzenie czy wartość jest w liście
             liczby.append(liczba)
-        print(liczba)
+            i += 1  # powiększ i o 1
+    print(liczby)
 
-    #     odp = input("Podaj liczbę od 1 do 10: ")
-    #     print(" Podałeś liczbę:", odp)
+    typy = set()  # deklaracja pustego zbioru na typy użytkownika
+    i = 0
+    while i < ileliczb:
+        typ = input("Podaj Liczbe {}".format(i + 1))
+    # Lista pozwala przechowawywać powtarzające wartości, a zbiór nieeeeeeee
+        if typ not in typy:
+            typy.add(typ)
+            i += 1
+        print(typy)
 
-    #     if liczba == int(odp):
-    #         print("Zgadłeś!")
-    #         break
-    #     else:
-    #         print("Jeszcze raz!!!")
-
-    # return 0
+    return 0
 
 
 if __name__ == '__main__':
     import sys
-sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv))
