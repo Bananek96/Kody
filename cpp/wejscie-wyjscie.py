@@ -2,13 +2,20 @@
 # -*- coding: utf-8 -*-
 #
 #  wejscie-wyjscie.py
+# duck typing
 
 def main(args):
-    a = input("Podaj pierwsza liczbe: ")
+    a = int(input("Podaj pierwsza liczbe: "))
     print(a)
     
-    b = input("Podaj druga liczbe: ")
+    b = int(input("Podaj druga liczbe: "))
     print(b)
+    
+    print("Suma: ", a + b)
+    print("Różnica: ", a - b)
+    print("Iloczyn: ", a * b)
+    print("Iloraz: ", a / b)
+    
     
     return 0
 
