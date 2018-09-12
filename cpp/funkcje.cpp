@@ -6,20 +6,19 @@ int suma(int a, int b){
     return a + b;
     }
 
-void roznica(int a, int b){
-    int wynik = a - b;
-    cout << wynik;
+int roznica(int a, int b){
+    return a - b;
     }
 
-void iloczyn(int a, int b){
-    int wynik = a * b;
-    cout << wynik;
+int iloraz(int a, int b){
+    return a / b;
     }
 
-void iloraz(int a, int b){
-    int wynik = a / b;
-    cout << wynik;
+int iloczyn(int a, int b){
+    return a * b;
     }
+
+
 
 int main(int argc, char **argv)
 {
@@ -34,11 +33,10 @@ int main(int argc, char **argv)
     cin >> b;
     cout << b;
     
-    cout << endl << "Suma: ";
-    suma(a, b);
-    cout << endl << "Różnica: " << a - b << endl;
-    cout << endl << "Iloraz: " << a / b << endl;
-    cout << endl << "Iloczyn: " << a * b << endl;
+    cout << endl << "Suma: " << suma(a, b);
+    cout << endl << "Różnica: " << roznica(a, b);
+    cout << endl << "Iloraz: " << iloraz(a, b);
+    cout << endl << "Iloczyn: " << iloczyn(a, b);
     
 	return 0;
 }
