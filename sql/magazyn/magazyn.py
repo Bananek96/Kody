@@ -15,14 +15,14 @@ def dane_z_pliku(nazwa_pliku):
     return dane
 
 
-def kwerenda_1(cur):
-    cur.execute("""
-        SELECT * FROM fake_apps
-    """)
+#def kwerenda_1(cur):
+    #cur.execute("""
+       # SELECT * FROM fake_apps
+    #""")
 
-    wyniki = cur.fetchall()  # pobranie wszystkich rekordów
-    for row in wyniki:  # odczytywanie rekordów
-        print(tuple(row))  # drukowanie pól
+    #wyniki = cur.fetchall()  # pobranie wszystkich rekordów
+    #for row in wyniki:  # odczytywanie rekordów
+        #print(tuple(row))  # drukowanie pól
 
 
 def main(args):
@@ -34,10 +34,22 @@ def main(args):
         cur.executescript(plik.read())
 
     # dodawanie danych do bazy
-    dane = dane_z_pliku('dane_customers.txt')
+    #dane = dane_z_pliku('dane_customers.txt')
+    #print(dane)
+    #dane.pop(0)  # usuń pierwszy rekord z listy
+    #cur.executemany('INSERT INTO customers VALUES(?, ?, ?)', dane)
+   
+    dane = dane_z_pliku('dane_subscriptions.txt')
     print(dane)
-    #fake_apps.pop(0)  # usuń pierwszy rekord z listy
-    #cur.executemany('INSERT INTO fake_apps VALUES(?, ?, ?, ?, ?)', fake_apps)
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO subscriptions VALUES(?, ?, ?, ?)', dane)
+   
+    dane = dane_z_pliku('dane_orders.txt')
+    print(dane)
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO orders VALUES(?, ?, ?, ?)', dane)
+
+
 
     #kwerenda_1(cur)
 
