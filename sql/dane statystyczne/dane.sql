@@ -2,8 +2,8 @@ DROP TABLE IF EXISTS miasta;
 CREATE TABLE miasta
 (
     id_miasta INTEGER PRIMARY KEY AUTOINCREMENT,
-    Nazwa_miasta TEXT,
-    Wojewodztwo TEXT
+    Nazwa_miasta TEXT(20),
+    Wojewodztwo TEXT(20)
 );
 
 DROP TABLE IF EXISTS powierzchnie;
