@@ -6,19 +6,15 @@
 
 def main(args):
     
-    a = int(input("Podaj a: "))
-        
-    b = int(input("Podaj b: "))
+	a = 0
+	b = 0
     
-    while a + b <= 75:
-            print(a + b)
-            a = int(input("Podaj a: "))
-            b = int(input("Podaj b: "))
-    
-            if a + b > 75:
-                print(a + b, "Za duża suma")
-                 
-    return 0
+	while a < 75:
+		a = int(input("Podaj  liczbę:"))
+        b = b + a
+	print("Za duza liczba", b)
+      
+	return 0
 
 if __name__ == '__main__':
     import sys
