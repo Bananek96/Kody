@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  choinka.py
+#  trojkatrys.py
 
 def main(args):
     

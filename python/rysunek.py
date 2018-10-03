@@ -13,8 +13,14 @@ def main(args):
     znak = input("Podaj znak: ")
  
     for i in range(a):
+        if i == 0 or i == a - 1:
+            print(znak*b)
+            continue
         for j in range (b):
-            print(znak, end='')
+            if j > 0 and j < b - 1:
+                print(" ", end=' ')
+            else:
+                print(znak, end=' ')
         print()
     
     return 0
