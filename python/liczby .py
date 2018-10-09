@@ -3,23 +3,29 @@
 #
 #  liczby.py
 
-def liczby2()
-    """
-    Drukuje wszystkie dwucyfrowe liczby o niepowtarzajacych sie cyfrach
-    """
-    pass
+def liczby2(a=10, b=99):
     
-def liczby3()
     """
-    Drukuje wszystkie trzycyfrowe liczby o niepowtarzajacych sie cyfrach
+    Program drukuje wszystkie liczby dwucyfrowe o niepowtarzających się
+    cyfrach oraz zwraca ilość takich liczb
     """
-    pass
+    for i in range(a, b):
+        for j in range(a, b):
             
-def main(args):
-    print(liczby2(10, 99))
-    print(liczby3(100, 999))
-    return 0
+        
     
+def liczby3(a=100, b=999):
+    
+    """
+    Program drukuje wszystkie liczby trzycyfrowe o niepowtarzających się
+    cyfrach oraz zwraca ilość takich liczb
+    """
+def main(args):
+    
+    print(liczby2)
+    print(liczby3)
+    
+    return 0
 if __name__ == '__main__':
     import sys
-sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv))
