@@ -3,37 +3,41 @@
 #
 #  liczby.py
 
-def liczby2(a=10, b=99):
+def liczby2():
     
     """
     Drukuje wszystkie liczby 2-cyfrowe o niepowtarzających się
     cyfrach i ich ilość
     """
-    for i in range(a, b):
-        if (i % 11) != 0:
-            print(i)
-        print()
-			          
-        
+    ile=0
     
-def liczby3(a=100, b=999):
+    for i in range(1, 10):
+        for j in range(0, 10):
+            if i != j:
+                print("{}{} ".format(i, j), end='')
+            ile += 1
+    return ile
+       
+def liczby3():
     
     """
     Drukuje wszystkie liczby 3-cyfrowe o niepowtarzających się
     cyfrach i ich ilość
     """
-    for j in range(a, b):
-        if (j % 11) != 0:
-            print(j)
-        print()
-
+    
+    ile=0
+    
+    for i in range(1, 10):
+        for j in range(0, 10):
+            for k in range(0, 10):
+                if i != j and i != k and j != k:
+                    print("{}{}{} ".format(i, j, k), end='')
+                ile += 1
+    return ile
+        
 def main(args):
-    
-    print(liczby2())
-    print(liczby3())
-    
     return 0
-
+    
 if __name__ == '__main__':
     import sys
 sys.exit(main(sys.argv))
