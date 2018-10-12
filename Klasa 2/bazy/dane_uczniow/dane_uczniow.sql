@@ -12,27 +12,27 @@ CREATE TABLE tbDane_os (
 	dzien_urodzenia INTEGER,
 	miesiac_urodzenia INTEGER,
     rok_urodzenia INTEGER,
-    miejsce_urodzenia TEXT (50),
-    wojewodztwo_urodzenia TEXT (50)
+    miejsce_urodzenia TEXT,
+    wojewodztwo_urodzenia TEXT
 );
 
 DROP TABLE IF EXISTS tbOceny;
 CREATE TABLE tbOceny (
 	numer_ucznia REFERENCES tbUczniowie(numer_ucznia,
-	zachowanie INTEGER,
-	religia_etyka INTEGER,
-    jpolski INTEGER,
-    jangielski INTEGER,
-    jniemiecki INTEGER,
-    matematyka INTEGER,
-    historia INTEGER,
-    geografia INTEGER,
-    biologia INTEGER,
-    fizyka INTEGER,
-    chemia INTEGER,
-    technika INTEGER,
-    informatyka INTEGER,
-    plastyka INTEGER,
-    po INTEGER,
-    wf TEXT (3)
+	zachowanie TEXT
+	religia_etyka DECIMAL DEFAULT NULL,
+    jpolski DECIMAL DEFAULT NULL,
+    jangielski DECIMAL DEFAULT NULL,
+    jniemiecki DECIMAL DEFAULT NULL,
+    matematyka DECIMAL DEFAULT NULL,
+    historia DECIMAL DEFAULT NULL,
+    geografia DECIMAL DEFAULT NULL,
+    biologia DECIMAL DEFAULT NULL,
+    fizyka DECIMAL DEFAULT NULL,
+    chemia DECIMAL DEFAULT NULL,
+    technika DECIMAL DEFAULT NULL,
+    informatyka DECIMAL DEFAULT NULL,
+    plastyka DECIMAL DEFAULT NULL,
+    po DECIMAL DEFAULT NULL,
+    wf DECIMAL DEFAULT NULL
 );
