@@ -1,1 +1,2 @@
-Moje repozytorium z kodami:
+Szkolne repozytorium github
+    Bierz co chcesz
