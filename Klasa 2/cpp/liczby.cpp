@@ -21,8 +21,8 @@ int liczby2()
             cout << i << j << " ";
             ile++;
             }
-            cout << endl;
         }
+        cout << endl;
     }
     return ile;
 }
@@ -43,8 +43,8 @@ int liczby3()
                     ile++;
                 }
             }
-            cout << endl;
         }
+        cout << endl;
     }
     return ile;
 }
