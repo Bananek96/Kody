@@ -9,7 +9,7 @@ def dane_z_pliku(nazwa_pliku, separator=','):
     dane = []  # pusta lista na dane
     
     if not os.path.isfile(nazwa_pliku):
-        print("Plik {} mie istnieje!".format(nazwa_pliku))
+        print("Plik {} nie istnieje!".format(nazwa_pliku))
         return dane
     
     with open(nazwa_pliku, 'r', newline='', encoding='utf-8') as plik:
