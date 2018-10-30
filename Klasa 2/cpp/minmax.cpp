@@ -50,7 +50,7 @@ int max(int tab[], int rozmiar)
     int max = tab[0]; //inicjacja pierwszego elementu tablicy
     for(int i = 1; i < rozmiar; i++)
     {
-            if(tab[i] < max)
+            if(tab[i] > max)
                 max = tab[i];
     }
     return max;
@@ -59,9 +59,11 @@ int max(int tab[], int rozmiar)
 int main(int argc, char **argv)
 {
 	int rozmiar = 100;
-    int tab[rozmiar]; // statyczna deklaracja tablicy
-    los(tab, rozmiar);
-    drukuj(tab, rozmiar);
+    int tablica[rozmiar];  // statyczna deklaracja tablicy
+    los(tablica, rozmiar);
+    drukuj(tablica, rozmiar);
+    cout << endl << "Najmniejsza liczba: " << min(tablica,rozmiar);
+    cout << endl << "Największa liczba: " << max(tablica, rozmiar);
     
 	return 0;
 }
