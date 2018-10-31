@@ -62,11 +62,12 @@ void ascii(char tab[])
 // a-z ascii 97-122
 void zamiana(char tab[])
 {   
+    int x = 0;
     int i = 0;
     while (tab[i] != '\0')
     {   
-        (int)tab[i] = x;
-        if ( 65 <= x and x <= 90 )
+        x = (int)tab[i];
+        if ( 65 <= x && x <= 90 )
         {
             x = x + 32;
             cout << (char)x;      
