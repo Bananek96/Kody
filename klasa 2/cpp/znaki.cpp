@@ -72,6 +72,11 @@ void zamiana(char tab[])
             x = x + 32;
             cout << (char)x;      
         }
+        else if ( 97 <= x && x <= 122 )
+        {
+            x = x - 32;
+            cout << (char)x;
+        }
         i++;
     }
 }
@@ -82,9 +87,9 @@ int main(int argc, char **argv)
     char znaki[rozmiar];  // deklaracja tablicy znakowej
     cout << "Jak się nazywasz: ";
     cin.getline(znaki, rozmiar);
-	cout << "Spierdalaj " << znaki << endl;
+	//~ cout << "Spierdalaj " << znaki << endl;
     //~ licz_znaki(znaki);
-    ascii(znaki);
+    //~ ascii(znaki);
     zamiana(znaki);
     
     
