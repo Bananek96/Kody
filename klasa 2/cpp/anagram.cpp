@@ -21,20 +21,24 @@ void wyswietl(char tab[], int roz)
     }
 }
 
-void anagram(char tab[], roz)
+void anagram(char tb[], int roz) 
 {
-        for // ktory zaczyna od indeksu ostatniego znaku
+    for (int i = roz - 1; i >= 0; i--)
+    {
+        cout << tb[i];
+    }
 }
 
 int main(int argc, char **argv)
 {
-	const int rozmiar = 50;  // deklaracja stałej
-    char tekst[rozmiar];  // deklaracja tablicy znakowej
-    cout << "Wprowadz tekst: ";
-    cin.getline(tekst, rozmiar);
-    wyswietl(tekst, zlicz(tekst));
-    anagram(tekst);
+    const int roz = 50; 
+    char tekst[roz];
+    cin.getline(tekst, roz);
+    wyswietl(tekst, cin.gcount());
+    cout << endl;
+    anagram(tekst, cin.gcount());
+    cout << endl;
     
-	return 0;
+return 0;
 }
 
