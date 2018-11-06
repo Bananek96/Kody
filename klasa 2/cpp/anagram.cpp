@@ -21,9 +21,12 @@ void wyswietl(char tab[], int roz)
     }
 }
 
-void anagram(char tab[], roz)
+void anagram(char tab[], int roz)
 {
-        for // ktory zaczyna od indeksu ostatniego znaku
+        for(int i = roz - 1; i >= 0; i--)
+        {
+            cout << tab[i];
+        }
 }
 
 int main(int argc, char **argv)
@@ -33,7 +36,9 @@ int main(int argc, char **argv)
     cout << "Wprowadz tekst: ";
     cin.getline(tekst, rozmiar);
     wyswietl(tekst, zlicz(tekst));
-    anagram(tekst);
+    cout << endl;
+    anagram(tekst, cin.gcount());
+    cout << endl;
     
 	return 0;
 }
