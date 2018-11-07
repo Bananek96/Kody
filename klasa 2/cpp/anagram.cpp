@@ -27,7 +27,6 @@ void anagram(char tab[], int roz)
         {
             cout << tab[i];
         }
-}
 
 int main(int argc, char **argv)
 {
@@ -35,11 +34,11 @@ int main(int argc, char **argv)
     char tekst[rozmiar];  // deklaracja tablicy znakowej
     cout << "Wprowadz tekst: ";
     cin.getline(tekst, rozmiar);
-    wyswietl(tekst, zlicz(tekst));
+    wyswietl(tekst, cin.gcount());
     cout << endl;
     anagram(tekst, cin.gcount());
     cout << endl;
     
-	return 0;
+return 0;
 }
 
