@@ -26,7 +26,7 @@ class Auto():
         return self.wiek
        
         
-ford = Auto('Ford', 'Mondeo', '2000', 'sedan')
+ford = Auto('Ford', 'Mondeo', 2000, 'sedan')
 print(ford.__dict__)
 
 exit()
