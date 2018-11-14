@@ -22,8 +22,9 @@ void drukujw(int st, float tbwsp[])
 
 float horner_it(int st, float tbwsp[], float x)
 {
-    float wynik = tbwsp[0];
-    for (int i = 1; i < st + 1; i++)
+    int i = 0;
+    float wynik = tbwsp[i];
+    for (i = 1; i <= st; i++)
     {
         wynik = wynik * x + tbwsp[i];
     }
