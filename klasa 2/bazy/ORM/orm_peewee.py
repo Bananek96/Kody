@@ -37,6 +37,27 @@ def main(args):
         os.remove(baza_plik)
     baza.connect() # połączenie z bazą
     baza.create_tables([Klasa, Uczen, Wynik])
+    
+    kl2a = Klasa(nazwa="2A", roknaboru=2017, rokmatury=2020)
+    kl2a.save()
+    
+    kl1a = Klasa(nazwa="1A", roknaboru=2019, rokmatury=2022)
+    kl1a.save()
+    
+    u1 = Uczen(imie="Jarosław", nazwisko="Kaczyński", plec=False, klasa=kl2a)
+    u1.save()
+    
+    u2 = Uczen(imie="Krystyna", nazwisko="Pawłowicz", plec=True, klasa = kl1a)
+    u2.save()
+    
+    u3 = Uczen(imie="Antoni", nazwisko="Macierewicz", plec=False, klasa = kl1a)
+    u3.save()
+    
+    
+    uczniowie = Uczen.select()
+    for uczen in uczniowie:
+        print(uczen.id, uczen.nazwisko, uczen.klasa.nazwa)
+    
     return 0
 
 if __name__ == '__main__':
