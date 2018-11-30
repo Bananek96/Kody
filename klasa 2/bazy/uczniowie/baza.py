@@ -25,12 +25,6 @@ def kwerenda_1(cur):
         SELECT * FROM magazyn
     """)
 
-    """
-    SELECT name, downloads FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps);
-    SELECT name, downloads FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps) ORDER BY downloads DESC LIMIT 5;
-    SELECT COUNT(name) FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps);
-    SELECT category, SUM(downloads) AS suma_pobran FROM fakeapps GROUP BY category ORDER BY suma_pobran DESC;
-    """
     wyniki = cur.fetchall()  # pobranie wszystkich rekordów na raz
     for row in wyniki:  # odczytywanie kolejnych rekordów
         print(tuple(row))  # drukowanie pól
@@ -77,4 +71,4 @@ def main(args):
 
 if __name__ == '__main__':
     import sys
-sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv))
