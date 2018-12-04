@@ -20,6 +20,12 @@ void drukujw(int st, float tbwsp[])
     cout << tbwsp[i];
 }
 
+float horner_re(int st, float tbwsp[], float x)
+{
+    if (st == 0) return tbwsp[0];
+    return x*horner_re(st-1, tbwsp, x) + tbwsp[st];
+}
+
 float horner_it(int st, float tbwsp[], float x)
 {
     int i = 0;
@@ -53,6 +59,7 @@ int main(int argc, char **argv)
     cout << "Wartość wielomianu o postaci: ";
     drukujw(stopien, tbwsp);
     cout << "\nDla x = " << x << " wynosi: " << horner_it(stopien, tbwsp, x);
+    cout << "\nRekurencyjne x = " << x << " wynosi: " << horner_re(stopien, tbwsp, x);
     
 	return 0;
 }
