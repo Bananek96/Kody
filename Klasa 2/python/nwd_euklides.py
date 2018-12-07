@@ -16,7 +16,7 @@ def main(args):
     a = int(input("Podaj liczbe: "))
     b = int(input("Podaj liczbe: "))
     
-    print("NWD {} i {} jest {} ". format(a, b, nwd(a, b)), end='')
+    print("NWD {} i {} jest {} ". format(a, b, nwd(a, b)))
     
     return 0
 
