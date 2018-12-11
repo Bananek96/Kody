@@ -31,7 +31,7 @@ pal2.fill((0, 0, 255))
 # ustawienie prostokąta zawierającego paletkę w początkowej pozycji
 pal2_prost = pal2.get_rect()
 pal2_prost.x = 350
-pal2_prost.y = 10
+pal2_prost.y = 20
 
 # pętla główna programu
 while True:
