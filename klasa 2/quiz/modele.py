@@ -22,6 +22,6 @@ class Pytanie(BazaModel):
         
 class Odpowiedz(BazaModel):
     
-    id_p = ForeignKeyField(Pytanie, related_name='odpowiedzi')
     odpowiedz = CharField(null=False)
-    odpok = IntegerField()
+    id_p = ForeignKeyField(Pytanie, related_name='odpowiedzi')
+    odpok = IntegerField(default=0)
