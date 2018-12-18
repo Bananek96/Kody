@@ -2,7 +2,6 @@
  * sortowanie.cpp
  */
 
-
 #include <iostream>
 #include <cstdlib>
 
