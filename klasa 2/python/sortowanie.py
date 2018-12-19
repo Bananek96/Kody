@@ -17,14 +17,13 @@ def zamien(lista, i):
 def sort(lista, n):
     print("Sortowanie przez wybór")
     i = 0
-    while i < n:
-        i += 1
-        k = i
-        j = i + 1
-        while j < n:
-            j += 1
-            if lista[j] < lista[k]:
-                zamien(lista, j)
+    for i in range (1, n):
+        tmp = lista[i]
+        i = i + 1
+        while i >= 0 and lista[i] > tmp:
+            lista[i + 1] = lista[i]
+            i= i - 1
+            lista[i + 1] = tmp
     
 def main(args):
     n = 20
