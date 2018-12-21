@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quiz</title>
+    <link rel="stlesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style type="text/css">
+        #menu li { display: inline;}
+        </style>
+</head>
+
+<body>
+    <p><center>
+        <img src="../static/img/quiz.png" align="middle">
+    </center></p>
+    
+    <ul u="menu">
+        <li><a href="{{ url_for('index') }}">Strona główna</a></li>
+        <li><a href="{{ url_for('lista') }}">Lista pytań</a></li>
+        <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        <li><a href="#">Dodaj pytanie</a></li>
+    </ul>
+    <div id="komunikaty">
+        {% with komunikaty = get_flashed_messages(with_categories = true) %}
+        {% if komunikaty %}
+            {% for kategoria, komunikat in komunikaty %}
+            <p class="{{ kategoria }}">{{komunikat}}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    
+    </div>
+    
+</body>
+
+</html>
