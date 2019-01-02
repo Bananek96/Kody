@@ -37,16 +37,6 @@ int main(int argc, char **argv)
     cout << "Ciąg Fibonacci'ego ITERACYJNIE " << n << " :" << fibonacci_it(n) << endl;
     cout << "Ciąg Fibonacci'ego REKURENCYJNIE " << n << " :" << fibonacci_re(n) << endl;
     
-    for (int i = 0; i <= n; i++)
-    {
-        cout << fibonacci_re(i) << " ";
-        if (i < 2) continue;
-        else
-        {
-            cout << (float)fibonacii_it(i) / (float)fibonacci_it(i - 1) << endl;
-        }
-    }
-    
 	return 0;
 }
 
