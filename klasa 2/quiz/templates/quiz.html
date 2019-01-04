@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "szablon.html" %}
+{% block tytul %}QUIZ{% endblock %}
+{% block h1 %}Zapraszam do Quiz'u{% endblock %}
 
-<head>
-<meta charset="utf-8" />
-<title>QUIZ</title>
-</head>
-
-<body>
-    <p><center>
-        <img src="../static/img/quiz.png" align="middle">
-    </center></p>
-    
-    <h1><center>Zapraszam do Quiz'u</center></h1>
-    <h2>Pytania</h2>
+{% block tresc %}
     <form method="POST">
     {% for p in query %}
-    <p>
+    <p class="lead">
         {{ p.id }} {{ p.pytanie }}<br>
         <br>
         {% for o in p.odpowiedzi %}
@@ -28,6 +18,4 @@
     {% endfor %}
     <input type="submit" value="Zapisz odpowiedzi">
     </form>
-</body>
-
-</html>
+{% endblock %}
