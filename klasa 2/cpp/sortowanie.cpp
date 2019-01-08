@@ -41,6 +41,7 @@ void zamien(int tab[], int i)
 
 void sort_bubble1(int tab[],int n)
 {
+    int licznik = 0;
     cout << "\nSortowanie bąbelkowe rosnące" << endl;
     for(int j = n - 1; j > 0; j--)
     {
@@ -51,12 +52,15 @@ void sort_bubble1(int tab[],int n)
                 // zamiana miejscami
                 zamien(tab, i);
             }
+            licznik ++;
         }
     }
+    cout << "Liczba porównań: " << licznik << endl;
 }
 
 void sort_bubble2(int tab[],int n)
 {
+    int licznik = 0;
     cout << "\nSortowanie bąbelkowe malejące" << endl;
     for(int j = n - 1; j > 0; j--)
     {
@@ -67,14 +71,17 @@ void sort_bubble2(int tab[],int n)
                 // zamiana miejscami
                 zamien(tab, i);
             }
+            licznik ++;
         }
     }
+    cout << "Liczba porównań: " << licznik << endl;
 }
 
 void sort_insert(int tab[], int n)
 {
     cout << "\nSortowanie przez wstawianie" << endl;
     int i, j, tmp;
+    int licznik = 0;
     for(i = 1; i < n; i++)  // pętla wybiera elementy zaczynając od drugiego
     {
         tmp = tab[i];
@@ -83,13 +90,16 @@ void sort_insert(int tab[], int n)
         {
             tab[j+1] = tab[j];
             j--;
+            licznik ++;
         }
         tab[j+1] = tmp;
     }
+    cout << "Liczba porównań: " << licznik << endl;
 }
 
 void sort(int tab[], int n)
 {
+    int licznik = 0;
     cout << "\nSortowanie przez wybór" << endl;
     for(int i = 0; i < n; i++)
     {
@@ -100,13 +110,15 @@ void sort(int tab[], int n)
             {
                 zamien(tab, j);
             }
+            licznik ++;
         }
     }
+    cout << "Liczba porównań: " << licznik << endl;
 }
 
 int main(int argc, char **argv)
 {
-    int rozmiar = 20;
+    int rozmiar = 10;
     int tablica[rozmiar];  // statyczna deklaracja tablicy
     los(tablica, rozmiar);
     drukuj(tablica, rozmiar);
