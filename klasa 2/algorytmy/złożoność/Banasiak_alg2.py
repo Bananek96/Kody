@@ -2,17 +2,17 @@
 # -*- coding: utf-8 -*-
 
 def funkcja():
-    a = int(input("Podaj a: "))
-    if a > 0 and a < 100:
-        return a
-    else:
-        funkcja()
+    a = 0
+    while a < 1 or a > 99:
+        a = int(input("Podaj a: "))
+    
+    return a
 
 def funkcja2(a, i):
     if a == i:
         print("{} jest liczbą parzystą".format(a))
-    else:
-        i += 2
+    elif a != i:
+        i = i + 2
         if i > a:
             print("{} nie jest liczbą parzystą".format(a))
         else:

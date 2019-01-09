@@ -3,21 +3,36 @@
  */
 
 #include <iostream>
+
 using namespace std;
 
 int main(int argc, char **argv)
 {
-    int a;
-    cout << "Podaj a: ";
-    cin >> a;
-    if(a > 0 and a < 100) continue;
-    int i = 2;
-    while(a != i and i <= 100)
+    int a = 0;
+    while (a <= 0 || a >= 100)
     {
-        i = i + 2;
-        cout << "a to liczba nieparzysta" << endl;
+        cout << "Podaj a: ";
+        cin >> a;
     }
+    int i = 2;
     
+    for (int j = 1; j != 100; j++)
+    {
+        if (a == i)
+        {
+            cout << "a jest liczbą parzystą";
+            break;
+        }
+        else
+        {
+            i = i + 2;
+            if (i == 100)
+            {
+                cout << "a nie jest liczbą parzystą";
+                break;
+            }
+        }
+    }
     return 0;
 }
 
