@@ -3,6 +3,7 @@
 {% block h1 %}Lista Pytań{% endblock %}
 
 {% block tresc %}
+    <h1>Pytania:</h1><br>
     {% for p in query %}
     <p>
         {{ p.id }} {{ p.pytanie }}
