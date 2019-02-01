@@ -5,7 +5,7 @@
 #  
 from flask import Flask
 from flask import render_template, request
-from flask import redirect, url_for, flash, abort
+from flask import redirect, url_for, flash
 from modele import *
 from forms import *
 
@@ -59,26 +59,8 @@ def dodaj():
                             pytanie=p.id,
                             odpok=int(o['odpok']))
             odp.save()
-        flash('Dodano pytanie: {}'.format(form.pytanie.data))
         return redirect(url_for('lista'))
     elif request.method == 'POST':
         flash_errors(form)
     
     return render_template('dodaj.html', form=form)
-
-
-def get_or_404(pid):
-    try:
-        p = Pytanie.get_by_id(pid)
-        return p
-    except Pytanie.DoesNotExist:
-        abort(404)
-
-
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html'), 404
-
-@app.route("/edytuj/<int:pid>", methods=['GET', 'POST'])
-def edytuj(pid):
-    p = get_or_404(pid)
