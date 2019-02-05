@@ -1,9 +1,5 @@
-{% extends "szablon.html" %}
-{% block tytul %}Quiz – dodaj pytanie{% endblock %}
-{% block h1 %}Quiz – dodaj pytanie{% endblock %}
-
-{% block tresc %}
-    <form method="POST">
+ <form method="POST">
+    {{ form.csrf_token}}
     
     {{ form.pytanie.label }}<br>
     {{ form.pytanie }}<br>
@@ -21,4 +17,3 @@
 
     <input type="submit" value="Zapisz pytanie">
     </form>
-{% endblock %}

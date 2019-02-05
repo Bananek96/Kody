@@ -1,11 +1,12 @@
 {% extends "szablon.html" %}
-{% block tytul %}Strony nie znaleziono{% endblock %}
-{% block h1 %}ERROR 404{% endblock %}
+{% block tytul %}Quiz – Strony nie znaleziono{% endblock %}
+{% block h1 %}Quiz – błąd{% endblock %}
 
 {% block tresc %}
-<div class="container">
-    <p>BŁĄD</p>
-    <p><a href="{{ url_for('index') }}"></a> Strona Główna</p>
+<div class="alert alert-warning">
+<h3>Wpisałeś fałszywe pytanie ty oszukisto</h3>
+    <p>
+        <a href="{{url_for('index')}}">Strona Główna</a>
+    </p>
 </div>
-
 {% endblock %}

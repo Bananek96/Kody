@@ -61,11 +61,11 @@ def dodaj():
             odp.save()
         flash('Dodano pytanie: {}'.format(form.pytanie.data))
         return redirect(url_for('lista'))
+        
     elif request.method == 'POST':
         flash_errors(form)
     
     return render_template('dodaj.html', form=form)
-
 
 def get_or_404(pid):
     try:
@@ -73,8 +73,7 @@ def get_or_404(pid):
         return p
     except Pytanie.DoesNotExist:
         abort(404)
-
-
+        
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -82,3 +81,11 @@ def page_not_found(e):
 @app.route("/edytuj/<int:pid>", methods=['GET', 'POST'])
 def edytuj(pid):
     p = get_or_404(pid)
+    form = PytanieForm()
+    form.kategoria.choices = [(k.id, k.kategoria) for k in Kategoria.select()]
+    
+    if form.validate_on_submit():
+        print(form.data)  
+        
+          
+    return render_template("edytuj.html", form=form)
