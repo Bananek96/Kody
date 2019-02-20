@@ -29,18 +29,17 @@ void szyfruj(char tb[], int k)
         i++;
     }
     
-    if (tekst[i] == ' ')
+    if (tb[i] == ' ')
     { 
-        kod -= klucz;
+        kod -= k;
     }
     
     else if(kod > 122)
     {
         kod -= 26;
-    }
-    tekst[i] = char(kod);
-    cout << tekst[i];
-    i++;
+        tb[i] = char(kod);
+        cout << tb[i];
+        i++;
     }
 }
 
