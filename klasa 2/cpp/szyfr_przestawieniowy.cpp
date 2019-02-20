@@ -1,8 +1,5 @@
-/*
- * szyfr_cezara.cpp
- */
-
 #include <iostream>
+#include <stdio.h>
 #include <string.h>
 
 using namespace std;
@@ -16,42 +13,35 @@ void deszyfruj(char tb[], int k)
 
 void szyfruj(char tb[], int k)
 {
-    for(int i = 0; i < ilosc; i++)
-    {
-        kod = (int)tekst[i] + klucz;
-        kod = (int)tekst[i];
-        if (tekst[i] == ' ')
-            kod -= klucz;
-        else if(kod > 122)
-            kod -= 26;
-        else if (kod < 91)
-        {
-            kod += klucz;
-            if (kod > 90) kod -= 26;
-        } 
-        else 
-        {
-            kod += klucz;
-            if (kod > 122) kod =-26;
-        }
+    int ile = strlen(tb);
+    cout << ile << endl;
+    int r = ile % k;
 
-        tekst[i] = char(kod);
-        cout << tekst[i];
+    if (r > 0)
+    {
+        for(int i = ile; i < ile + k - r; i++)
+        {
+            tb[i]= '.';
+        }
+        tab[i]=
     }
 }
+
+
 
 
 int main(int argc, char **argv)
 {
     char tekst[MAKS];
-	int klucz = 0;
-
+    int klucz = 0;
+    
     cout << "Podaj tekst: " << endl;
     cin.getline(tekst, MAKS);
     
-    cout << "Podaj klucz: " << endl;
+    cout << "Podaj klucz: ";
     cin >> klucz;
-
+    
+    
     szyfruj(tekst, klucz);
-	return 0;
+    return 0;
 }
