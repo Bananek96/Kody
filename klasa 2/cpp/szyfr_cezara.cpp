@@ -4,6 +4,8 @@
 
 
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
@@ -19,12 +21,26 @@ void szyfruj(char tb[], int k)
     k = k % 26;
     int i = 0;
     int kod = 0;
+    
     while(tb[i] != '\0')
     {
-        if(tb[i] = ' ' || tb[i] = 'x' || tb[i] = 'y' || tb[i] = 'z' || tb[i] = 'X' || tb[i] = 'Y' || tb[i] = 'Z')continue;
         kod = (int)tb[i] + k;
         cout << (char)kod;
         i++;
+    }
+    
+    if (tekst[i] == ' ')
+    { 
+        kod -= klucz;
+    }
+    
+    else if(kod > 122)
+    {
+        kod -= 26;
+    }
+    tekst[i] = char(kod);
+    cout << tekst[i];
+    i++;
     }
 }
 
