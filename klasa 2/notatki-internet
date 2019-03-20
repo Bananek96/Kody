@@ -1,0 +1,42 @@
+SIEĆ
+~ LAN (Local Area Network)
+~ Ethernet, skrętka, rj45, switch
+~ WiFi 
+~ Adres MAC: 00:0A:E6:3E:FD:E1
+
+Server DHCP
+
+router:
+interfejs wewnetrzny (LAN)
+interfejs zewnetrzny (WAN - Wide Area Network)
+
+ADRES IP:
+
+Adresy Lokalne:
+192.169.3.20
+172.16.0.0
+10.0.0.0
+
+Adresy Publiczne:
+IPv4 ~ 32 bity
+IPv6 ~ 128 bitow
+
+Servery DNS (Domain Name System)
+
+Protokoły:
+~ HTTP 
+    ADRES URL:
+        https://
+~ POST
+    protokół bezstanowy
+~ FTP
+    protokół transmisji plików
+~ SMTP
+    protokół komunikacyjny (przekazywanie emailu)
+~ POP3
+    protokół pozwalający odbiór email
+~ IMAP 
+    protokół pozwalający na ściąganie wiadomości email
+    
+Kapsułkowanie:
+
