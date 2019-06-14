@@ -1,7 +1,7 @@
 <?php if(!defined('IN_GS')){ die('you cannot load this page directly.'); } ?>
 
 
-<script src="<?php get_theme_url(); ?>/js/jquery.min.js"></script>
+
 <?php include("header.inc.php")?>
 
 

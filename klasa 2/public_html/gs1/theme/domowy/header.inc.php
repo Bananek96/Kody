@@ -9,7 +9,7 @@
 
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="<?php get_theme_url(); ?>css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php get_theme_url(); ?>/css/bootstrap.min.css">
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,6 +20,7 @@
   <![endif]-->
 
   <!-- twoje style -->
-  <link rel="stylesheet" href="<?php get_theme_url(); ?>css/style.css">
+  <link rel="stylesheet" href="<?php get_theme_url(); ?>/css/style.css">
+  <script src="<?php get_theme_url(); ?>/js/jquery.min.js"></script>
   <?php get_header(); ?>
 </head>
