@@ -3,7 +3,24 @@
   &lt;a class=&quot;nav-link&quot; href=&quot;&lt;?php echo htmlspecialchars($item-&gt;link); ?&gt;&quot;&gt;
     &lt;?php echo htmlspecialchars($item-&gt;text); echo ($item-&gt;isCurrent)?&#039; &lt;span class=&quot;sr-only&quot;&gt;(aktualna)&lt;/span&gt;&#039;:&#039;&#039;;?&gt;
   &lt;/a&gt;
-&lt;/li&gt;]]></value></item><item><title><![CDATA[Sidebar]]></title><slug>sidebar</slug><value><![CDATA[&lt;h2&gt;GetSimple Features&lt;/h2&gt;
+&lt;/li&gt;]]></value></item><item><title><![CDATA[galerie1]]></title><slug>galerie1</slug><value><![CDATA[&lt;?php
+$galerie = array();
+$gdir = GSDATAPATH . I18N_GALLERY_DIR;
+$dir_handle = @opendir($gdir);
+while ($filename = readdir($dir_handle)) {
+  if (strrpos($filename,&#039;.xml&#039;) === strlen($filename)-4) {
+    $data = getXML($gdir . $filename);
+    $galerie[] = array(&#039;name&#039; =&gt; (string) $data-&gt;name, &#039;title&#039; =&gt; (string) $data-&gt;title, &#039;pubDate&#039; =&gt; (string) $data-&gt;pubDate);
+  }
+}
+echo &#039;&lt;ul&gt;&#039;;
+foreach($galerie as $galeria) {
+  echo &#039;&lt;li&gt;&lt;a href=&quot;&#039;;
+  echo find_i18n_url(&#039;index&#039;,null).&#039;gallery?name=&#039;.$galeria[&#039;name&#039;];
+  echo &#039;&quot;&gt;&#039;.$galeria[&#039;title&#039;].&#039;&lt;/a&gt;&lt;/li&gt;&#039;;
+}
+echo &#039;&lt;/ul&gt;&#039;;
+?&gt;]]></value></item><item><title><![CDATA[Sidebar]]></title><slug>sidebar</slug><value><![CDATA[&lt;h2&gt;GetSimple Features&lt;/h2&gt;
 &lt;ul&gt; 
 &lt;li&gt;XML based data storage&lt;/li&gt; 
 &lt;li&gt;Best-in-Class User Interface&lt;/li&gt; 

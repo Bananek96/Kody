@@ -1,6 +1,8 @@
 <?php if(!defined('IN_GS')){ die('you cannot load this page directly.'); } ?>
 
-<?php include("header.inc.php")?>
+<!-- jQuery library -->
+<script src="<?php get_theme_url(); ?>/js/jquery.min.js"></script>
+<?php include("header.inc.php"); ?>
 
 <body id="<?php get_page_slug(); ?>">
 
@@ -22,7 +24,6 @@
 
 <?php include("footer.inc.php")?>
 
-<script src="<?php get_theme_url(); ?>/js/jquery.min.js"></script>
 <script src="<?php get_theme_url(); ?>/js/popper.min.js"></script>
 <script src="<?php get_theme_url(); ?>/js/bootstrap.min.js"></script>
 

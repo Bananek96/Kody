@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><page_url>index</page_url><pretty_urls/><language>pl_PL</language><show_excerpt>Y</show_excerpt><excerpt_length>150</excerpt_length><posts_per_page>8</posts_per_page><recent_posts>5</recent_posts><archivesby>m</archivesby><readmore>R</readmore><titlelink>Y</titlelink><gobacklink>B</gobacklink><images>Y</images><imagewidth>120</imagewidth><imageheight>120</imageheight><imagecrop/><imagealt>1</imagealt><imagelink/><enablecustomsettings>1</enablecustomsettings><customsettings><![CDATA[imageClass img-thumbnail
+imageDefault rozne/news.png
+classpost list-group
+classpostcontent list-group-item float-right]]></customsettings><ver>3.6</ver></item>
