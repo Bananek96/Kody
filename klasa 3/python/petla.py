@@ -6,9 +6,9 @@ import random
 def main(args):
     
     lista =[]
-    for i in range(5):
-        lista.append(random.randint(1, 30))
-    print(lista)
+    for i in range(1):
+        lista.append(random.sample(range(0, 31), 5))
+    print("Lista 5 losowych i unikalnych liczb: ", lista)
     
     return 0
 
