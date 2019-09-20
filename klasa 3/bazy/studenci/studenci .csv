@@ -1,4 +1,4 @@
-id_studenta,imiê,nazwisko,id_uczelni,miejsce_zam,rok_studiow,dochod_na_osobe
+id_studenta,imiê,nazwisko,id_uczelni,id_miasta,rok_studiow,dochod_na_osobe
 1,Jadwiga,Baranowska,5,89,I,2382
 2,Zofia,Chorzowska,1,148,II,1549
 3,Katarzyna,Bilska,5,104,I,3037
