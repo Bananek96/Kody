@@ -8,13 +8,13 @@ CREATE TABLE uczniowie(
 
 DROP TABLE IF EXISTS przedmioty;
 CREATE TABLE przedmioty(
-    id_przedmiot INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_przedmiot INTEGER PRIMARY KEY AUTO_INCREMENT,
     nazwa VARCHAR(60) NOT NULL CHECK (nazwa <> '')
 );
 
 DROP TABLE IF EXISTS oceny;
 CREATE TABLE oceny(
-    id_oceny INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_oceny INTEGER PRIMARY KEY AUTO_INCREMENT,
     data DATE NOT NULL,
     id_ucznia CHAR(8),
     id_przedmiot INTEGER,
